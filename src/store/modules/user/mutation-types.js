@@ -1,0 +1,7 @@
+export const LOGIN = 'user/LOGIN'
+export const GETSUBS = 'user/GETSUBS'
+export const MODPASS = 'user/MODPASS'
+export const ADDUSR = 'user/ADDUSR'
+export const MODMONEY = 'user/MODMONEY'
+export const GETTAX = 'user/GETTAX'
+export const RECVTAX = 'user/RECVTAX'

@@ -1,0 +1,22 @@
+<script>
+  export default {
+    render: function (c) {
+      var self = this;
+      var headerEl, contentEl, contentChildEl, footerEl;
+
+      if (self.title) {
+        headerEl = c('f7-card-header', {domProps: {innerHTML: self.title}});
+      }
+      if (self.content) {
+        contentChildEl = c('div', {domProps: {innerHTML: self.content}});
+        contentEl = c('f7-card-content', {}, [contentChildEl]);
+      }
+      if (self.footer) {
+        footerEl = c('f7-card-footer', {domProps: {innerHTML: self.footer}});
+      }
+
+      return c('div', {class: {'card': true}}, [headerEl, contentEl, footerEl, self.$slots.default]);
+    },
+    props: ['title', 'content', 'footer']
+  }
+</script>
